@@ -1,0 +1,4 @@
+# keep in sync with src/main/resources/templates/haskell/test/stack.yaml
+resolver: lts-19.13
+
+packages: []
