@@ -12,7 +12,7 @@ RUN apt-get update \
 RUN curl -sSL https://get.haskellstack.org/ | sh
 
 RUN apt-get clean \
-    && rm -rf /var/lib/apt/lists/* \
+    && rm -rf /var/lib/apt/lists/*
 
 COPY stack-config/config.yaml $STACK_ROOT/config.yaml
 COPY stack-config/global-project/stack.yaml $STACK_ROOT/global-project/stack.yaml
