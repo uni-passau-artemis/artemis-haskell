@@ -1,0 +1,17 @@
+= README
+
+:url-artemis: https://www.github.com/ls1intum/artemis
+
+Provides the Docker image that is used in link:{url-artemis}[Artemis] to run the automatic tests for Haskell exercises.
+
+
+== Updating
+
+When updating the Stack resolver version, a new tag named `vMAJOR.MINOR.0` has to be published.
+
+In Artemis, the Docker image reference has to be changed in `src/main/resources/config/application.yml`.
+The Stack version has to be updated in a few places:
+
+* `src/main/resources/templates/haskell/exercise/stack.yaml`
+* `src/main/resources/templates/haskell/solution/stack.yaml`
+* `src/main/resources/templates/haskell/test/stack.yaml`
