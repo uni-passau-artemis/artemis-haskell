@@ -1,4 +1,4 @@
 # keep in sync with Artemis according to README
-resolver: lts-19.30
+resolver: lts-19.33
 
 packages: []
