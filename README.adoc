@@ -4,6 +4,9 @@
 
 Provides the Docker image that is used in link:{url-artemis}[Artemis] to run the automatic tests for Haskell exercises.
 
+If you need a specific/newer version of Stack for your exercises, please open an issue or submit a pull request.
+Otherwise, the version will only be updated irregularly as needed for our exercises.
+
 
 == Updating
 
