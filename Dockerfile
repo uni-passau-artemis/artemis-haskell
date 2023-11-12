@@ -14,17 +14,17 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 
 RUN stack setup \
-  && stack ghc \
-  --package QuickCheck \
-  --package quickcheck-assertions \
-  --package smallcheck \
-  --package tasty \
-  --package tasty-ant-xml \
-  --package tasty-hunit \
-  --package tasty-quickcheck \
-  --package tasty-smallcheck \
-  --package unordered-containers \
-  -- --version \
-  # Jenkins runs the builds not as root, but with a system dependent user id.
-  # Therefore, we allow all users to access the stack cache.
-  && chmod -R a+rw $STACK_ROOT
+    && stack ghc \
+            --package QuickCheck \
+            --package quickcheck-assertions \
+            --package smallcheck \
+            --package tasty \
+            --package tasty-ant-xml \
+            --package tasty-hunit \
+            --package tasty-quickcheck \
+            --package tasty-smallcheck \
+            --package unordered-containers \
+            -- --version \
+    # Jenkins runs the builds not as root, but with a system dependent user id.
+    # Therefore, we allow all users to access the stack cache.
+    && chmod -R a+rw $STACK_ROOT
