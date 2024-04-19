@@ -1,0 +1,23 @@
+name: Cleanup Untagged Images
+
+on:
+  schedule:
+    - cron: "0 0 * * SUN"
+  # or manually
+  workflow_dispatch:
+
+jobs:
+  delete-untagged-images:
+    name: Delete Untagged Images
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        name:
+          - artemis-haskell
+    steps:
+      - uses: actions/delete-package-versions@v5
+        with:
+          package-name: ${{ matrix.name }}
+          package-type: container
+          min-versions-to-keep: 10
+          delete-only-untagged-versions: 'true'
