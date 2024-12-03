@@ -1,6 +1,7 @@
 FROM docker.io/library/debian:stable
+LABEL maintainer="Benedikt Fein <fein@fim.uni-passau.de>"
 
-ENV STACK_ROOT /stack_cache
+ENV STACK_ROOT=/stack_cache
 
 RUN mkdir -p $STACK_ROOT
 
