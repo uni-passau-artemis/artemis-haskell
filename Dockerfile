@@ -1,4 +1,4 @@
-FROM docker.io/library/debian:trixie-20260316
+FROM docker.io/library/debian:trixie-20260406
 LABEL maintainer="Benedikt Fein <fein@fim.uni-passau.de>"
 
 ENV STACK_ROOT=/stack_cache
